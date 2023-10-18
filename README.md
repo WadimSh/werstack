@@ -24,4 +24,4 @@
 
 ## стек используемый на платформе
 
-&emsp;&emsp;<img src="https://img.icons8.com/ultraviolet/38/000000/react--v1.png"/>&emsp;&emsp;<img src="https://img.icons8.com/color/38/000000/nodejs.png"/>&emsp;&emsp;<img src="https://img.icons8.com/color/48/000000/express-js.png" />&emsp;&emsp;<img src="https://img.icons8.com/color/38/000000/mongodb.png" />
+&emsp;&emsp;<img src="https://img.icons8.com/ultraviolet/38/000000/react--v1.png"/>&emsp;&emsp;<img src="https://img.icons8.com/fluency/38/000000/node-js.png"/>&emsp;&emsp;<img src="https://img.icons8.com/color/48/000000/express-js.png" />&emsp;&emsp;<img src="https://img.icons8.com/color/38/000000/mongodb.png" />
