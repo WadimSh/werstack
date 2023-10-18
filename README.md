@@ -25,3 +25,5 @@
 ## стек используемый на платформе
 
 <img src="https://img.icons8.com/color/36/000000/html-5--v1.png"/>&emsp;&emsp;&emsp;<img src="https://img.icons8.com/color/36/000000/css3.png"/>&emsp;&emsp;&emsp;<img src="https://img.icons8.com/color/38/000000/javascript--v1.png"/>&emsp;&emsp;&emsp;<img src="https://img.icons8.com/ultraviolet/38/000000/react--v1.png"/>&emsp;&emsp;&emsp;<img src="https://img.icons8.com/color/38/000000/nodejs.png"/> 
+
+<img src="https://img.icons8.com/color/48/express-js.png" />  <img src="https://img.icons8.com/nolan/64/mongo-db.png" />
