@@ -13,7 +13,6 @@ function App() {
       <ConfigContext.Provider value={config[lang]}>
         <Button 
           htmiType="button"
-          children="ЗАГРУЗИТЬ"
           before
         />
       </ConfigContext.Provider>
