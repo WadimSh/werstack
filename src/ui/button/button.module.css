@@ -1,0 +1,29 @@
+.button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 14px 24px;
+  border-radius: 50px;
+  background-color: #ee5626;
+  font-size: 20px;
+  color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.button:focus {
+  opacity: .9;
+}
+
+.button:hover {
+  opacity: .9;
+}
+
+.button:disabled {
+  background-color: #f8dac6;
+  color: #fff;
+  box-shadow: none;
+  pointer-events: none;
+}
