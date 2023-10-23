@@ -1,18 +1,21 @@
 import React from "react";
+import { Icon } from "../icons/signin";
 import style from './button.module.css';
 
-const Button = ({ htmiType, onClick, icon, side, children, ...rest }) => {
-  const Icon = icon && (
-    <>
-      {icon}
-    </>
-  )
+const Button = ({ htmiType, onClick, before, after, children, ...rest }) => {
+  
 
   return (
     <button type={htmiType} onClick={onClick} className={style.button} {...rest}>
-      {side === 'left' && {Icon}}
+      {before && 
+      <Icon 
+       side={true}
+      />}
       {children || 'label'}
-      {side === 'right' && {Icon}}
+      {after && 
+      <Icon 
+        side={false}
+      />}
     </button>
   )
 };
