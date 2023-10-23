@@ -1,0 +1,102 @@
+{
+  "colontituls": {
+    "logo": "",
+    "navigation": [
+      {
+        "name": "",
+        "href": ""
+      },
+      {
+        "name": "",
+        "href": ""
+      },
+      {
+        "name": "",
+        "href": ""
+      }
+    ],
+    "button": {
+      "name": "",
+      "type": ""
+    }
+  },
+  "cover": {
+    "title": "",
+    "description": [
+      "",
+      ""
+    ]
+  },
+  "adout": {
+    "title": "",
+    "description": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "stages": {
+    "title": "",
+    "description": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "form": {
+    "title": "",
+    "description": [
+      ""
+    ],
+    "input": {
+      "playsholder": "",
+      "type": ""
+    },
+    "button": {
+      "name": "",
+      "type": ""
+    }
+  },
+  "faq": {
+    "title": "",
+    "list": [
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      }
+    ]
+  }
+}
