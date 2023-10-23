@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon } from "../icons/signin";
+import { Icon } from "../icons/icons";
 import style from './button.module.css';
 
 const Button = ({ htmiType, onClick, before, after, children, ...rest }) => {

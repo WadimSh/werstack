@@ -13,6 +13,7 @@ function App() {
       <ConfigContext.Provider value={config[lang]}>
         <Button 
           htmiType="button"
+          children="BUTTON"
           before
         />
       </ConfigContext.Provider>
