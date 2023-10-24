@@ -6,13 +6,14 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
   const { question, answer, id } = faq;
  
   return (
-    <div>
+    <div className="box">
       <div
         className={`header ${active === id ? "active" : ""}`}
         onClick={() => handleToggle(id)}
       >
         <h3>{question}</h3>
         <span 
+          className="span"
           style={
             active === id 
              ? { rotate: "135deg" }
