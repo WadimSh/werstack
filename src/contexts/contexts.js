@@ -1,10 +1,11 @@
 import React from 'react';
-import data from '../data/data.json'
+import data from '../data/data'
 
-export const config = {
-  ru: data,
-  en: {}
-}
-
+const dat = data;
 
 export const ConfigContext = React.createContext();
+
+export const config = {
+  ru: dat,
+  en: {}
+};
