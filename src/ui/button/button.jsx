@@ -1,12 +1,12 @@
 import React from "react";
 import { Icon } from "../icons/icons";
-import style from './button.module.css';
+import './button.css';
 
 const Button = ({ htmiType, onClick, before, after, children, ...rest }) => {
   
 
   return (
-    <button type={htmiType} onClick={onClick} className={style.button} {...rest}>
+    <button type={htmiType} onClick={onClick} className="button" {...rest}>
       {before && <Icon side={true} />}
       {children || null}
       {after && <Icon side={false} />}
