@@ -7,13 +7,14 @@
 
 .box {
   height: 13px;
-  width: 14px;
+  width: 24px;
   display: flex;
   flex-direction: column;
   gap: 4px;
   padding: 0;
   border: none;
   background: transparent;
+  margin: 10px;
 }
 
 .box .line {

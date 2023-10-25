@@ -5,27 +5,27 @@ const BurgerButton = () => {
 
   const handleClick = () => {
     setIsOpen(!isOpen);
-  }
-  console.log(isOpen)
+  };
+  
   return (
     <button type="button" onClick={handleClick} className="box">
       <span className="line"
         style={
-          isOpen === true ? {rotate: "45deg", width: "14px", top: "5.5px" } : { rotate: "0deg", width: "14px", top: "0px" }
+          isOpen ? {rotate: "45deg", width: "24px", top: "6px" } : { rotate: "0deg", width: "24px", top: "0px" }
         }
       ></span>
       <span className="line"
         style={
-          isOpen === true ? { width: "0px" } : { width: "14px" }
+          isOpen ? { width: "0px" } : { width: "24px" }
         }
       ></span>
       <span className="line"
         style={
-          isOpen === true ? {rotate: "-45deg", width: "14px", top: "-5.5px" } : { rotate: "0deg", width: "14px", top: "0px" }
+          isOpen ? {rotate: "-45deg", width: "24px", top: "-5.5px" } : { rotate: "0deg", width: "24px", top: "0px" }
         }
       ></span>
     </button>
-  )
+  );
 };
 
 export default BurgerButton;
