@@ -13,15 +13,13 @@ const Form = () => {
     setInputValue(value);
   };
 
-  console.log('Input value:', inputValue);
-
   return (
     <section>
       <div>
         <h2>{title}</h2>
         <p>{description}</p>
       </div>
-      <form style={{display: "flex"}}>
+      <form style={{display: "flex", gap: "10px"}}>
         <Input 
           onInputChange={handleInputChange}
           placeholder="Укажите ссылку на дизайн-макет"
