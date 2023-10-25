@@ -1,13 +1,15 @@
 .line {
   position: relative;
   height: 2px;
+  width: 24px;
   background: var(--themes-main-color);
   border: none;
 }
 
-.box {
+.boxi {
   height: 13px;
   width: 24px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -17,6 +19,6 @@
   margin: 10px;
 }
 
-.box .line {
+.boxi .line {
   transition: .5s;
 }

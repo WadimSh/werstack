@@ -8,20 +8,20 @@ const BurgerButton = () => {
   };
   
   return (
-    <button type="button" onClick={handleClick} className="box">
+    <button type="button" onClick={handleClick} className="boxi">
       <span className="line"
         style={
-          isOpen ? {rotate: "45deg", width: "24px", top: "6px" } : { rotate: "0deg", width: "24px", top: "0px" }
+          isOpen ? {rotate: "45deg", top: "6px" } : { rotate: "0deg", top: "0px" }
         }
       ></span>
       <span className="line"
         style={
-          isOpen ? { width: "0px" } : { width: "24px" }
+          isOpen ? { scale: "0" } : { scale: "1" }
         }
       ></span>
       <span className="line"
         style={
-          isOpen ? {rotate: "-45deg", width: "24px", top: "-5.5px" } : { rotate: "0deg", width: "24px", top: "0px" }
+          isOpen ? {rotate: "-45deg", top: "-5.5px" } : { rotate: "0deg", top: "0px" }
         }
       ></span>
     </button>
