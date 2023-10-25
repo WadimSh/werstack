@@ -1,0 +1,21 @@
+.line {
+  position: relative;
+  height: 2px;
+  background: var(--themes-main-color);
+  border: none;
+}
+
+.box {
+  height: 13px;
+  width: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.box .line {
+  transition: .5s;
+}
