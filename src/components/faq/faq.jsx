@@ -7,12 +7,12 @@ const FAQ = () => {
   const { title, list } = config.faq;
 
  return (
-   <>
+   <section>
      <h2>{title}</h2>
        <Accordion 
          faqs={list}
        />
-   </>
+   </section>
  );
 };
 
