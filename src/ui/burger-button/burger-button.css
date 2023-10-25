@@ -1,5 +1,8 @@
 .line {
   position: relative;
+  rotate: 0;
+  top: 0;
+  scale: 1;
   height: 2px;
   width: 24px;
   background: var(--themes-main-color);
@@ -21,4 +24,18 @@
 
 .boxi .line {
   transition: .5s;
+}
+
+.up {
+  rotate: 45deg;
+  top: 6px;
+}
+
+.down {
+  rotate: -45deg;
+  top: -5.5px;
+}
+
+.one {
+  scale: 0;
 }

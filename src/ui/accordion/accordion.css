@@ -19,6 +19,9 @@ article {
 
 .span {
   position: relative;
+  rotate: 0;
+  top: 0;
+  left: 0;
   font-size: 48px;
   font-weight: 500;
 }
@@ -49,4 +52,10 @@ article span {
 
 .collapse .show {
   height: auto;
+}
+
+.rotate {
+  rotate: 135deg;
+  top: 6px;
+  left: 3px;
 }

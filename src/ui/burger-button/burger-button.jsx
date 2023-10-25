@@ -11,16 +11,13 @@ const BurgerButton = ({ onClick }) => {
   return (
     <button type="button" onClick={handleClick} className="boxi">
       <span 
-        className="line"
-        style={isOpen ? {rotate: "45deg", top: "6px" } : { rotate: "0deg", top: "0px" }}
+        className={`line ${isOpen ? "up" : "" }`}
       ></span>
       <span 
-        className="line"
-        style={isOpen ? { scale: "0" } : { scale: "1" }}
+        className={`line ${isOpen ? "one" : "" }`}
       ></span>
       <span 
-        className="line"
-        style={isOpen ? {rotate: "-45deg", top: "-5.5px" } : { rotate: "0deg", top: "0px" }}
+        className={`line ${isOpen ? "down" : "" }`}
       ></span>
     </button>
   );
