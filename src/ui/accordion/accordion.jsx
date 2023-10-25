@@ -18,9 +18,7 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
       </div>
       <div
         ref={contentEl}
-        className={`collapse ${
-          active === id ? "show" : ""
-        }`}
+        className={`collapse ${active === id ? "show" : ""}`}
         style={
           active === id 
             ? { height: contentEl.current.scrollHeight }

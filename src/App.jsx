@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import { config, ConfigContext } from './contexts/contexts';
 
-//import Form from './components/form/form';
-//import FAQ from './components/faq/faq';
-
-import BurgerButton from './ui/burger-button/burger-button';
+import LetStart from './components/let-start/let-start';
+import FAQ from './components/faq/faq';
 
 import './App.css';
 
@@ -14,7 +12,8 @@ function App() {
   return (
     <div className="app">
       <ConfigContext.Provider value={config[lang]}>
-        <BurgerButton />
+        <LetStart />
+        <FAQ />
       </ConfigContext.Provider>
     </div>
   );
