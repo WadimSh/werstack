@@ -16,8 +16,8 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
           className="span"
           style={
             active === id 
-             ? { rotate: "135deg" }
-             : { rotate: "0deg" }
+             ? { rotate: "135deg", top: "6px" }
+             : { rotate: "0deg", top: "0px" }
           }
         >+</span>
       </div>

@@ -18,6 +18,7 @@ article {
 }
 
 .span {
+  position: relative;
   font-size: 48px;
   font-weight: 500;
 }
