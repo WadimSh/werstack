@@ -4,18 +4,18 @@
   top: 0;
   scale: 1;
   height: 2px;
-  width: 24px;
+  width: 100%;
   background: var(--themes-main-color);
   border: none;
 }
 
 .boxi {
-  height: 13px;
-  width: 24px;
+  height: 18px;
+  width: 55px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  justify-content: space-between;
   padding: 0;
   border: none;
   background: transparent;
@@ -23,17 +23,17 @@
 }
 
 .boxi .line {
-  transition: .5s;
+  transition: .6s;
 }
 
 .up {
-  rotate: 45deg;
-  top: 6px;
+  rotate: 225deg;
+  top: 8px;
 }
 
 .down {
-  rotate: -45deg;
-  top: -5.5px;
+  rotate: -225deg;
+  top: -8px;
 }
 
 .one {

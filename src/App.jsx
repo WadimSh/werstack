@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { config, ConfigContext } from './contexts/contexts';
 
-import Form from './components/form/form';
-import FAQ from './components/faq/faq';
+//import Form from './components/form/form';
+//import FAQ from './components/faq/faq';
 
 import BurgerButton from './ui/burger-button/burger-button';
 
@@ -15,8 +15,6 @@ function App() {
     <div className="app">
       <ConfigContext.Provider value={config[lang]}>
         <BurgerButton />
-        <Form />
-        <FAQ />
       </ConfigContext.Provider>
     </div>
   );
