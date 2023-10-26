@@ -10,7 +10,7 @@ const FAQ = () => {
 
  return (
    <section>
-      <Title level={3}>ОТВЕТЫ НА ВОПРОСЫ</Title>
+      <Title level={2}>{title}</Title>
       <Accordion 
         faqs={list}
       />
