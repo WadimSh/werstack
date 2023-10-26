@@ -1,11 +1,14 @@
 .title-1 {
   font-size: 34px;
+  color: var(--themes-main-color);
 }
 
 .title-2 {
   font-size: 24px;
+  color: var(--themes-main-color);
 }
 
 .title-3 {
   font-size: 14px;
+  color: var(--themes-main-color);
 }
