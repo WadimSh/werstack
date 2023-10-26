@@ -10,7 +10,7 @@ const About = () => {
 
  return (
    <section>
-      <Title level={2}>{title}</Title>
+      <Title level={1}>{title}</Title>
       <Description
        texts={description}
       />
