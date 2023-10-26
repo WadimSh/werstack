@@ -1,5 +1,7 @@
 import { useContext } from 'react';
 import { ConfigContext } from '../../contexts/contexts';
+
+import Title from '../../ui/title/title';
 import Accordion from '../../ui/accordion/accordion';
 
 const FAQ = () => {
@@ -8,10 +10,10 @@ const FAQ = () => {
 
  return (
    <section>
-     <h2>{title}</h2>
-       <Accordion 
-         faqs={list}
-       />
+      <Title level={3}>ОТВЕТЫ НА ВОПРОСЫ</Title>
+      <Accordion 
+        faqs={list}
+      />
    </section>
  );
 };
