@@ -5,12 +5,15 @@ import Title from '../../ui/title/title';
 import Accordion from '../../ui/accordion/accordion';
 import LayoutColumns from '../../ui/layout/layout-columns';
 
-const FAQ = () => {
+const FAQ = ({ ref }) => {
   const config = useContext(ConfigContext);
   const { title, list } = config.faq;
 
  return (
-  <LayoutColumns>
+  <LayoutColumns
+    name="section"
+    ref={ref}
+  >
     <Title 
         level={2}
         children={title}
