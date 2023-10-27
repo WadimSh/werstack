@@ -9,7 +9,7 @@ const Form = () => {
     setInputValue(value);
   };
 
-  const resalt = inputValue;
+  console.log("url:", inputValue);
 
   return (
     <form style={{display: "flex", gap: "10px"}}>
@@ -18,9 +18,8 @@ const Form = () => {
           placeholder="Укажите ссылку на дизайн-макет"
         />
         <Button 
-          htmiType="button"
           children="ЗАГРУЗИТЬ"
-          after
+          side={false}
         />
       </form>
   );

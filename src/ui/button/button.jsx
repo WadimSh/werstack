@@ -2,14 +2,14 @@ import React from "react";
 import { Icon } from "../icons/icons";
 import './button.css';
 
-const Button = ({ htmiType, onClick, before, after, children, ...rest }) => {
-  
+const Button = ({ htmlType, onClick, side, children, ...rest }) => {
+  const renderIcon = side !== undefined && <Icon side={side} />;
+  const buttonType = htmlType !== undefined ? htmlType : "button";
 
   return (
-    <button type={htmiType} onClick={onClick} className="button" {...rest}>
-      {before && <Icon side={true} />}
-      {children || null}
-      {after && <Icon side={false} />}
+    <button type={buttonType} onClick={onClick} className="button" {...rest}>
+      {renderIcon}
+      {children}
     </button>
   )
 };
