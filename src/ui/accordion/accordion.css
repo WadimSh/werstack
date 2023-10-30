@@ -1,6 +1,6 @@
 article {
+  align-self: flex-end;
   width: 800px;
-  padding: 20px;
   color: var(--themes-main-color);
 }
 

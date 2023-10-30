@@ -1,16 +1,8 @@
 .layout {
+  width: var(--width-layout);
+  padding-top: var(--padding-layout);
+  margin-bottom: var(--margin-layout);
   display: flex;
-  gap: 20px;
-}
-
-@media screen and (max-width: 1440px) {
-  .layout {
-    gap: 10px;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .layout {
-    flex-direction: column;
-  }
+  flex-direction: column;
+  gap: var(--gap-layout);
 }

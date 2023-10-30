@@ -1,6 +1,73 @@
 :root {
+  /* переменные цветовой палитры */
   --themes-main-color: #ee5626;
+  --themes-second-color: #f9f9f9;
   --themes-background-color: #fff;
+  --themes-marker-color: #f8dac6;
+  --themes-gradient-color: linear-gradient(180deg, #FFF 0%, #F8DAC6 100%);
+
+  --span-main-size: 20px;
+  --main-line-height: 120%;
+  --second-line-height: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --heading-main-size: 48px;
+    --heading-second-size: 64px;
+    --heading-third-size: 20px;
+    --text-main-size: 18px;
+    --text-copyright-size: 12px;
+
+    --width-layout: 1240px;
+    --padding-layout: 100px;
+    --margin-layout: 80px;
+    --gap-layout: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  :root {
+    --heading-main-size: clamp(2.25rem, 1.3929rem + 1.7857vw, 3rem);
+    --heading-second-size: clamp(3rem, 1.8571rem + 2.381vw, 4rem);
+    --heading-third-size: clamp(1.125rem, 0.9821rem + 0.2976vw, 1.25rem);
+    --text-main-size: clamp(1rem, 0.8571rem + 0.2976vw, 1.125rem);
+
+    --width-layout: clamp(38rem, -7.1429rem + 94.0476vw, 77.5rem);
+    --padding-layout: clamp(3.75rem, 0.8929rem + 5.9524vw, 6.25rem);
+    --margin-layout: clamp(2.5rem, -0.3571rem + 5.9524vw, 5rem);
+    --gap-layout: clamp(1.5rem, 1.7857rem + -0.5952vw, 1.25rem);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  :root {
+    --heading-main-size: clamp(1.5rem, 0.9643rem + 2.6786vw, 2.25rem);
+    --heading-second-size: clamp(2rem, 1.2857rem + 3.5714vw, 3rem);
+    --heading-third-size: clamp(1rem, 0.9107rem + 0.4464vw, 1.125rem);
+    --text-main-size: clamp(0.875rem, 0.7857rem + 0.4464vw, 1rem);
+    --text-copyright-size: clamp(0.625rem, 0.5357rem + 0.4464vw, 0.75rem);
+
+    --width-layout: clamp(18rem, 3.7143rem + 71.4286vw, 38rem);
+    --padding-layout: clamp(2.5rem, 1.6071rem + 4.4643vw, 3.75rem);
+    --margin-layout: clamp(1.25rem, 0.3571rem + 4.4643vw, 2.5rem);
+    --gap-layout: clamp(1rem, 0.6429rem + 1.7857vw, 1.5rem);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :root {
+    --heading-main-size: 24px;
+    --heading-second-size: 32px;
+    --heading-third-size: 16px;
+    --text-main-size: 14px;
+    --text-copyright-size: 10px;
+
+    --width-layout: 288px;
+    --padding-layout: 40px;
+    --margin-layout: 20px;
+    --gap-layout: 16px;
+  }
 }
 
 body {
