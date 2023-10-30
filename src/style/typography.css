@@ -1,0 +1,12 @@
+.text {
+  margin: 0;
+  padding: 0;
+}
+
+.text_type_default {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: var(--text-main-size);
+  line-height: var(--main-line-height);
+}
+
