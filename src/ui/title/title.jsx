@@ -1,14 +1,17 @@
 import React from "react";
 
-const Title = ({ level, children }) => {
+const Title = ({ level, children, customClass }) => {
   const classMap = {
     1: 'text_type_large',
     2: 'text_type_medium',
   };
-  const Tag = `h${level}`;
-  const className = `text ${classMap[level] || 'text_type_small'}`;
 
-  return <Tag className={`text ${className}`}>{children}</Tag>;
+  const defaultClass = 'text_type_small';
+  const selectedClass = classMap[level] || defaultClass;
+  const combinedClass = `${selectedClass} ${customClass || ''}`;
+  const Tag = `h${level || 3}`;
+
+  return <Tag className={combinedClass}>{children}</Tag>;
 }
 
 export default Title;

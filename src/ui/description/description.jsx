@@ -1,11 +1,16 @@
 import React from 'react';
 
-const Description = ({ texts }) => {
-  
+const Description = ({ texts, customClass }) => {
+  const classNames = ['text_type_default'];
+
+  if (customClass) {
+    classNames.push(customClass);
+  }
+
   return (
-    <div>
+    <div style={{ alignSelf: "flex-end", width: "800px" }}>
       {texts.map((text, index) => (
-        <p key={index} className="text text_type_default" style={{ marginBottom: '10px' }}>{text}</p>
+        <p key={index} className={classNames.join(' ')}>{text}</p>
       ))}
     </div>
   );

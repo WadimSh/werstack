@@ -1,16 +1,17 @@
 import React from "react";
 import './layout-columns.css';
 
-const LayoutColumns = ({ name, ref, children }) => {
-  const names = ['section', 'div', 'footer', 'header'];
-
-  const Tag = names.includes(name) ? name : 'div';
+const LayoutColumns = ({ name, forwardedRef, children }) => {
+  const validNames = ['section', 'div', 'footer', 'header'];
+  const Tag = validNames.includes(name) ? name : 'div';
 
   return (
-    <Tag className="layout" ref={ref}>
+    <Tag className="layout" ref={forwardedRef}>
       {children}
     </Tag>
   );
 };
 
-export default LayoutColumns;
+export default React.forwardRef((props, ref) => (
+  <LayoutColumns forwardedRef={ref} {...props} />
+));

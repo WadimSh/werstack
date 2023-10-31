@@ -72,10 +72,16 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
+  color: var(--themes-main-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   overflow-y: scroll;
+}
+
+.mb-4 {
+  margin-top: 0;
+  margin-bottom: 16px;
 }

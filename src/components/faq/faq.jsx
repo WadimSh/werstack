@@ -16,8 +16,8 @@ const FAQ = ({ ref }) => {
   >
     <Title 
         level={2}
-        children={title}
-      />
+        customClass="mb-4"
+      >{title}</Title>
       <Accordion 
         faqs={list}
       />
