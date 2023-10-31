@@ -1,10 +1,14 @@
 import React from "react";
-import "./title.css"
 
 const Title = ({ level, children }) => {
+  const classMap = {
+    1: 'text_type_large',
+    2: 'text_type_medium',
+  };
   const Tag = `h${level}`;
-  
-return <Tag className={`title-${level > 3 ? 3 : level}`}>{children}</Tag>;
+  const className = `text ${classMap[level] || 'text_type_small'}`;
+
+  return <Tag className={`text ${className}`}>{children}</Tag>;
 }
 
 export default Title;

@@ -1,12 +1,36 @@
 .text {
   margin: 0;
   padding: 0;
+  color: var(--themes-main-color);
 }
 
 .text_type_default {
-  font-family: 'Inter';
   font-weight: 400;
   font-size: var(--text-main-size);
   line-height: var(--main-line-height);
 }
 
+.text_type_large, .text_type_medium {
+  font-weight: 700;
+  line-height: var(--second-line-height);
+}
+
+.text_type_large {
+  font-size: var(--heading-main-size);
+}
+
+.text_type_medium {
+  font-size: var(--heading-second-size);
+}
+
+.text_type_small {
+  font-weight: 500;
+  font-size: var(--heading-third-size);
+  line-height: var(--main-line-height);
+}
+
+.text_type_span {
+  font-weight: 500;
+  font-size: var(--span-main-size);
+  line-height: var(--second-line-height);
+}
