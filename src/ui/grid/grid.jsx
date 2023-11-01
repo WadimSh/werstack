@@ -8,8 +8,8 @@ const Grid = (props) => {
       display: 'flex',
       flexWrap: 'wrap',
       boxSizing: 'border-box',
-      marginRight: -spacing,
-      marginLeft: -spacing,
+      marginRight: spacing,
+      marginLeft: spacing,
     },
     item: {
       boxSizing: 'border-box',
@@ -32,7 +32,7 @@ const Grid = (props) => {
   };
 
   return (
-    <div
+    <section
       style={{
         ...styles.container,
         flexDirection: direction,
@@ -44,20 +44,21 @@ const Grid = (props) => {
     >
       {React.Children.map(props.children, (child, index) => (
         <div
+          key={index}
           style={{
             ...styles.item,
             flex: getBreakpointSize(xs, 'xs'),
-            '@media (min-width: 600px)': { flex: getBreakpointSize(sm, 'sm') },
-            '@media (min-width: 960px)': { flex: getBreakpointSize(md, 'md') },
-            '@media (min-width: 1280px)': { flex: getBreakpointSize(lg, 'lg') },
-            '@media (min-width: 1920px)': { flex: getBreakpointSize(xl, 'xl') },
+            '@media (minWidth: 600px)': { flex: getBreakpointSize(sm, 'sm') },
+            '@media (minWidth: 960px)': { flex: getBreakpointSize(md, 'md') },
+            '@media (minWidth: 1280px)': { flex: getBreakpointSize(lg, 'lg') },
+            '@media (minWidth: 1920px)': { flex: getBreakpointSize(xl, 'xl') },
           }}
           className={item ? 'item' : ''}
         >
           {child}
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
