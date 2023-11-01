@@ -2,7 +2,7 @@ import React from "react";
 import './layout-columns.css';
 
 const LayoutColumns = ({ name, forwardedRef, children }) => {
-  const validNames = ['section', 'div', 'footer', 'header'];
+  const validNames = ['section', 'div', 'article', 'footer', 'header'];
   const Tag = validNames.includes(name) ? name : 'div';
 
   return (

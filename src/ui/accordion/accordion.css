@@ -1,7 +1,6 @@
-article {
+.accordion {
   align-self: flex-end;
   width: 800px;
-  color: var(--themes-main-color);
 }
 
 .box {
@@ -25,20 +24,20 @@ article {
   font-weight: 500;
 }
 
-article h3 {
+.question {
   margin: 0;
   font-size: 20px;
   font-weight: 500;
 }
 
-article p {
+.answer {
   padding: 0 20px 10px;
   font-size: 18px;
   font-weight: 400;
   line-height: 120%; 
 }
 
-article span {
+.accordion .span {
   transition: .3s;
 }
 

@@ -16,7 +16,7 @@ const About = ({ ref }) => {
   ref={ref}
 >
       <Title 
-        level={6}
+        level={2}
         customClass="mb-4"
       >{title}</Title>
       <Description
