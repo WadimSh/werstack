@@ -4,6 +4,7 @@ import { ConfigContext } from '../../contexts/contexts';
 import Title from '../../ui/title/title';
 import Accordion from '../../ui/accordion/accordion';
 import LayoutColumns from '../../ui/layout/layout-columns';
+import Form from '../../ui/form/form';
 
 const FAQ = ({ ref }) => {
   const config = useContext(ConfigContext);
@@ -14,6 +15,7 @@ const FAQ = ({ ref }) => {
     name="section"
     ref={ref}
   >
+    <Form />
     <Title 
         level={2}
         customClass="mb-4"

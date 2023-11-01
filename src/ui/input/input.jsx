@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
-const Input = ({ label, placeholder, onInputChange, validation, value }) => {
+const Input = ({ type = 'text', label, placeholder, onInputChange, validation, value }) => {
   const inputRef = useRef();
   const [error, setError] = useState('');
 
@@ -35,7 +35,7 @@ const Input = ({ label, placeholder, onInputChange, validation, value }) => {
       {label && <label>{label}</label>}
       <input
         ref={inputRef}
-        type='text'
+        type={type}
         placeholder={placeholder}
         value={value}
         onChange={handleInputChange}
