@@ -15,6 +15,14 @@ const FAQ = ({ ref }) => {
     name="section"
     ref={ref}
   >
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: "10px" }}>
+      <div style={{ gridColumn: "span 2", border: "1px solid #000", height: "10rem" }}></div>
+      <div style={{ gridColumn: "span 4", border: "1px solid #000", height: "10rem" }}></div>
+      <div style={{ gridColumn: "span 6", border: "1px solid #000", height: "10rem" }}></div>
+      <div style={{ gridColumn: "span 2", border: "1px solid #000", height: "10rem" }}></div>
+      <div style={{ gridColumn: "span 8", border: "1px solid #000", height: "10rem" }}></div>
+      <div style={{ gridColumn: "span 2", border: "1px solid #000", height: "10rem" }}></div>
+    </div>
     <Form />
     <Title 
         level={2}
