@@ -2,12 +2,12 @@ import React from "react";
 import { Icon } from "../icons/icons";
 import './button.css';
 
-const Button = ({ htmlType, onClick, side, children, ...rest }) => {
+const Button = ({ htmlType = "button", onClick, side, children, customClass, ...rest }) => {
   const renderIcon = side !== undefined && <Icon side={side} />;
-  const buttonType = htmlType !== undefined ? htmlType : "button";
-
+  const classNames = ['button', customClass].filter(Boolean).join(' ');
+  
   return (
-    <button type={buttonType} onClick={onClick} className="button" {...rest}>
+    <button type={htmlType} onClick={onClick} className={classNames} {...rest}>
       {renderIcon}
       {children}
     </button>

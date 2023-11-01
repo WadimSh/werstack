@@ -5,6 +5,7 @@ import Title from '../../ui/title/title';
 import Description from '../../ui/description/description';
 import LayoutColumns from '../../ui/layout/layout-columns';
 
+
 const About = ({ ref }) => {
   const config = useContext(ConfigContext);
   const { title, description } = config.adout;
@@ -15,7 +16,7 @@ const About = ({ ref }) => {
   ref={ref}
 >
       <Title 
-        level={2}
+        level={6}
         customClass="mb-4"
       >{title}</Title>
       <Description
