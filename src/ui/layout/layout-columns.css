@@ -6,3 +6,15 @@
   flex-direction: column;
   gap: var(--gap-layout);
 }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
