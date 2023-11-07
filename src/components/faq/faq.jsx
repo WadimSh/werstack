@@ -18,8 +18,8 @@ const FAQ = ({ ref }) => {
   >
     <LayoutColumns
       item={true}
-      xs={8}
-      xl={7}
+      sm={12}
+      md={8}
     >
       <Title 
         level={2}
@@ -29,7 +29,6 @@ const FAQ = ({ ref }) => {
     <LayoutColumns
       item={true}
       md={12}
-      xl={8}
     >
       <Accordion 
         faqs={list}

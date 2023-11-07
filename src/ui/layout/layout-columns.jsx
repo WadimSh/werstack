@@ -1,38 +1,41 @@
-import React from "react";
+import React, { useCallback, useMemo } from "react";
 import './layout-columns.css';
 
-const LayoutColumns = ({ container, item, nameTag, forwardedRef, gap,  children, xs, sm, md, lg, xl }) => {
-  const validNames = ['section', 'div', 'article', 'footer', 'header'];
+const validNames = ['section', 'div', 'article', 'footer', 'header'];
+const breakpoints = {
+  xs: 0,
+  sm: 600,
+  md: 960,
+  lg: 1280,
+  xl: 1920,
+};
+
+const LayoutColumns = ({ container, item, nameTag, forwardedRef, gap, children, xs, sm, md, lg, xl }) => {
   const Tag = validNames.includes(nameTag) ? nameTag : 'div';
 
-  const getBreakpointSize = (size, breakpoint) => {
-    if (size !== undefined) {
-      return size <= 12 ? size : 12;
-    }
-      return size = 12;
-  };
+  const getBreakpointSize = useCallback((size) => {
+    return size <= 12 ? size : 12;
+  }, []);
 
-  const itemStyle = item ? {gridColumn: `span ${getBreakpointSize(xs)}`} : {};
+  const itemStyle = useMemo(() => {
+    if (!item) return {};
+    let size = getBreakpointSize(xs);
+    const sizes = {xs, sm, md, lg, xl};
+    for (const [key, value] of Object.entries(breakpoints)) {
+      if (window.matchMedia(`(min-width: ${value}px)`).matches) {
+        size = getBreakpointSize(sizes[key]);
+      }
+    }
+    return { gridColumn: `span ${size}` };
+  }, [xs, sm, md, lg, xl, item, getBreakpointSize]);
 
-    if (window.matchMedia("(min-width: 600px)").matches) {
-      itemStyle.gridColumn = `span ${getBreakpointSize(sm)}`;
-    }
-    
-    if (window.matchMedia("(min-width: 960px)").matches) {
-      itemStyle.gridColumn = `span ${getBreakpointSize(md)}`;
-    }
-    
-    if (window.matchMedia("(min-width: 1280px)").matches) {
-      itemStyle.gridColumn = `span ${getBreakpointSize(lg)}`;
-    }
-    
-    if (window.matchMedia("(min-width: 1920px)").matches) {
-      itemStyle.gridColumn = `span ${getBreakpointSize(xl)}`;
-    }
-  
-  const containerStyle = container ? { gap: gap + 'px' } : {};
-  
-  const combinedStyle = { ...containerStyle, ...itemStyle };
+  const containerStyle = useMemo(() => {
+    return container ? { gap: gap + 'px' } : {};
+  }, [container, gap]);
+
+  const combinedStyle = useMemo(() => {
+    return { ...containerStyle, ...itemStyle };
+  }, [containerStyle, itemStyle]);
 
   return (
     <Tag
