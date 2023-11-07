@@ -13,6 +13,16 @@ const breakpoints = {
 const LayoutColumns = ({ container, item, nameTag, forwardedRef, gap, children, xs, sm, md, lg, xl }) => {
   const Tag = validNames.includes(nameTag) ? nameTag : 'div';
 
+  //Заготовка новому варианту функции
+  //const defaultSize = 12;
+  //const sizes = {xs, sm, md, lg, xl} = {
+  //  xs: xs !== undefined ? xs : defaultSize,
+  //  sm: sm !== undefined ? sm : xs || defaultSize,
+  //  md: md !== undefined ? md : sm || defaultSize,
+  //  lg: lg !== undefined ? lg : md || defaultSize,
+  //  xl: xl !== undefined ? xl : lg || defaultSize,
+  //};
+  
   const getBreakpointSize = useCallback((size) => {
     return size <= 12 ? size : 12;
   }, []);
