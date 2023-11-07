@@ -6,20 +6,33 @@ const LayoutColumns = ({ container, item, nameTag, forwardedRef, gap,  children,
   const Tag = validNames.includes(nameTag) ? nameTag : 'div';
 
   const getBreakpointSize = (size, breakpoint) => {
-    
+    if (size !== undefined) {
+      return size <= 12 ? size : 12;
+    }
+      return size = 12;
   };
 
-  const itemStyle = item && {
-    gridColumn: `span ${xs}`,
-    '@media (min-width: 600px)': { gridColumn: `span ${sm}` },
-    '@media (min-width: 960px)': { gridColumn: `span ${md}` },
-    '@media (min-width: 1280px)': { gridColumn: `span ${lg}` },
-    '@media (min-width: 1920px)': { gridColumn: `span ${xl}` }
-  };
+  const itemStyle = item ? {gridColumn: `span ${getBreakpointSize(xs)}`} : {};
+
+    if (window.matchMedia("(min-width: 600px)").matches) {
+      itemStyle.gridColumn = `span ${getBreakpointSize(sm)}`;
+    }
+    
+    if (window.matchMedia("(min-width: 960px)").matches) {
+      itemStyle.gridColumn = `span ${getBreakpointSize(md)}`;
+    }
+    
+    if (window.matchMedia("(min-width: 1280px)").matches) {
+      itemStyle.gridColumn = `span ${getBreakpointSize(lg)}`;
+    }
+    
+    if (window.matchMedia("(min-width: 1920px)").matches) {
+      itemStyle.gridColumn = `span ${getBreakpointSize(xl)}`;
+    }
   
-  const containerStyle = container && { gap: gap + 'px' };
+  const containerStyle = container ? { gap: gap + 'px' } : {};
   
-  const combinedStyle = containerStyle || itemStyle;
+  const combinedStyle = { ...containerStyle, ...itemStyle };
 
   return (
     <Tag

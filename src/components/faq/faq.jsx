@@ -18,7 +18,7 @@ const FAQ = ({ ref }) => {
   >
     <LayoutColumns
       item={true}
-      md={12}
+      xs={8}
       xl={7}
     >
       <Title 
