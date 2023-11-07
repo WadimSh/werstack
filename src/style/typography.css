@@ -18,7 +18,7 @@
 
 .text_type_span {
   font-weight: 500;
-  font-size: var(--span-main-size);
+  font-size: var(--heading-main-size);
   line-height: var(--second-line-height);
 }
 

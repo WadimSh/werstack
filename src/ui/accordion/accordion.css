@@ -1,6 +1,6 @@
 .accordion {
   align-self: flex-end;
-  width: 800px;
+  max-width: 800px;
 }
 
 .box {
@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 48px;
+  min-height: 48px;
   padding: 20px 10px 10px;
   cursor: pointer;
 }
@@ -20,21 +20,14 @@
   position: relative;
   top: 0;
   left: 0;
-  font-size: 48px;
-  font-weight: 500;
 }
 
 .question {
   margin: 0;
-  font-size: 20px;
-  font-weight: 500;
 }
 
 .answer {
   padding: 0 20px 10px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 120%; 
 }
 
 .accordion .span {

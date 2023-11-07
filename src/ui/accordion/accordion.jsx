@@ -10,7 +10,7 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
 
   // Генерируем классы для стилизации на основе активности элемента
   const headerClass = `header ${isActive ? "active" : ""}`;
-  const spanClass = `span ${isActive ? "rotate" : ""}`;
+  const spanClass = `text_type_span span ${isActive ? "rotate" : ""}`;
   const collapseClass = `collapse ${isActive ? "show" : ""}`;
   
   // Определяем стили для отображения или скрытия содержимого
@@ -19,11 +19,11 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
   return (
     <div className="box">
       <div className={headerClass} onClick={() => handleToggle(id)}>
-        <h3 className="question">{question}</h3>
+        <h3 className="question text_type_small">{question}</h3>
         <span className={spanClass}>+</span>
       </div>
       <div ref={contentEl} className={collapseClass} style={contentStyle}>
-        <p className="answer">{answer}</p>
+        <p className="answer text_type_default">{answer}</p>
       </div>
     </div>
   );
