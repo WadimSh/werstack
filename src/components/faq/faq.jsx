@@ -19,7 +19,7 @@ const FAQ = ({ ref }) => {
     <LayoutColumns
       item={true}
       sm={12}
-      md={8}
+      md={9}
     >
       <Title 
         level={2}

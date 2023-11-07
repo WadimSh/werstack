@@ -12,18 +12,31 @@ const About = ({ ref }) => {
 
  return (
   <LayoutColumns
-  name="section"
-  ref={ref}
->
+    container
+    nameTag="section"
+    ref={ref}
+    gap={6}
+  >
+    <LayoutColumns
+      item
+      sm={12}
+      md={4}
+    >
       <Title 
         level={2}
         customClass="mb-4"
       >{title}</Title>
+    </LayoutColumns>
+    <LayoutColumns
+      item
+      md={12}
+    >
       <Description
-       texts={description}
-       customClass="mb-4"
+         texts={description}
+         customClass="mb-4"
       />
-   </LayoutColumns>
+    </LayoutColumns>  
+  </LayoutColumns>
  );
 };
 
