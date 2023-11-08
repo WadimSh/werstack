@@ -4,11 +4,37 @@
   margin-bottom: var(--margin-layout);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap-gap);
 }
 
 .item {
+  grid-column: span var(--xs);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+@media screen and (min-width: 600px) {
+  .item {
+    grid-column: span var(--sm);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .item {
+    grid-column: span var(--md);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .item {
+    grid-column: span var(--lg);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .item {
+    grid-column: span var(--xl);
+  }
 }
