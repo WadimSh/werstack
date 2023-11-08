@@ -11,13 +11,13 @@ const FAQ = ({ ref }) => {
 
  return (
   <LayoutColumns
-    container={true}
+    container
     nameTag="section"
     ref={ref}
     gap={8}
   >
     <LayoutColumns
-      item={true}
+      item
       sm={12}
       md={9}
     >
@@ -27,7 +27,7 @@ const FAQ = ({ ref }) => {
       >{title}</Title>
     </LayoutColumns>
     <LayoutColumns
-      item={true}
+      item
       md={12}
     >
       <Accordion 
