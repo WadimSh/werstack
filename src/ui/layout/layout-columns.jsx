@@ -3,8 +3,7 @@ import '../../style/styles.css';
 
 const LayoutColumns = ({ container, item, forwardedRef, gap, children, xs, sm, md, lg, xl }) => {
   const Tag = container ? 'section' : 'div';
-  
-  
+    
   const sizes = useMemo(() => {
     const defaultSize = 12;
     return {

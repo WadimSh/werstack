@@ -12,10 +12,11 @@ const Cover = () => {
     >
       <LayoutFlex
         item
-        md={4}
+        md={1}
       ></LayoutFlex>
       <LayoutFlex
         item
+        sm={8}
         md={6}
       ></LayoutFlex>
       <LayoutFlex

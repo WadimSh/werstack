@@ -5,17 +5,6 @@ const LayoutFlex = ({ container, item, nameTag, forwardedRef, gap, children, xs,
   const validNames = ['section', 'article', 'footer', 'header'];
   const Tag = validNames.includes(nameTag) ? nameTag : 'div';
   
-  const sizes = useMemo(() => {
-    const defaultSize = 12;
-    return {
-      xs: xs || defaultSize,
-      sm: sm || xs || defaultSize,
-      md: md || sm || xs || defaultSize,
-      lg: lg || md || sm || xs || defaultSize,
-      xl: xl || lg || md || sm || xs || defaultSize,
-    };
-  }, [xs, sm, md, lg, xl]);
-
   const getGridSize = (size) => {
     if (typeof size === 'number') {
       return size <= 12 ? `${Math.round((size / 12) * 10e7) / 10e5}%` : '100%';
@@ -28,15 +17,15 @@ const LayoutFlex = ({ container, item, nameTag, forwardedRef, gap, children, xs,
       ...(container ? { '--gap-gap': gap + 'px' } : {}),
       ...(item
         ? {
-            '--xs': getGridSize(sizes.xs),
-            '--sm': getGridSize(sizes.sm),
-            '--md': getGridSize(sizes.md),
-            '--lg': getGridSize(sizes.lg),
-            '--xl': getGridSize(sizes.xl),
+            '--xs': getGridSize(xs),
+            '--sm': getGridSize(sm),
+            '--md': getGridSize(md),
+            '--lg': getGridSize(lg),
+            '--xl': getGridSize(xl),
           }
         : {}),
     };
-  }, [container, gap, item, sizes]);
+  }, [container, gap, item, xs, sm, md, lg, xl]);
   
   return (
     <Tag 
