@@ -17,7 +17,7 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
   const contentStyle = isActive ? { height: contentEl.current.scrollHeight } : { height: "0px" };
  
   return (
-    <div className="accordion_point">
+    <li className="accordion_point">
       <div className="accordion_header" onClick={() => handleToggle(id)}>
         <h3 className="accordion_question text_type_small">{question}</h3>
         <span className={checkClass}>+</span>
@@ -25,7 +25,7 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
       <div ref={contentEl} className={collapseClass} style={contentStyle}>
         <p className="accordion_answer text_type_default">{answer}</p>
       </div>
-    </div>
+    </li>
   );
 };
 
@@ -39,14 +39,16 @@ const Accordion = ({ faqs }) => {
 
   return (
     <article className="accordion">
-      {faqs.map((faq, index) => (
-        <AccordionItem 
-          key={index} 
-          active={active} 
-          handleToggle={handleToggle} 
-          faq={faq} 
-        />
-      ))}
+      <ul className="accordion_list">
+        {faqs.map((faq, index) => (
+          <AccordionItem 
+            key={index} 
+            active={active} 
+            handleToggle={handleToggle} 
+            faq={faq} 
+          />
+        ))}
+      </ul>
     </article>
   );
 };

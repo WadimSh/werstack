@@ -1,5 +1,6 @@
+/* main styles */
 /* стили контейнера */
-.container {
+.container_columns {
   width: var(--width-layout);
   padding-top: var(--padding-layout);
   margin-bottom: var(--margin-layout);
@@ -8,39 +9,38 @@
   gap: var(--gap-gap);
 }
 
-.item {
+.item_columns {
   grid-column: span var(--xs);
   display: flex;
 }
 
-@media screen and (min-width: 600px) {
-  .item {
-    grid-column: span var(--sm);
-  }
+.container_flex {
+  width: var(--width-layout);
+  padding-top: var(--padding-layout);
+  margin-bottom: var(--margin-layout);
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: var(--gap-gap);
 }
 
-@media screen and (min-width: 960px) {
-  .item {
-    grid-column: span var(--md);
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .item {
-    grid-column: span var(--lg);
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .item {
-    grid-column: span var(--xl);
-  }
+.item_flex {
+  flex: var(--xs);
+  box-sizing: border-box;
+  height: 20px;
+  border: 1px solid var(--themes-main-color);
 }
 
 /* стили аккордиона */
 .accordion {
   margin-left: auto;
   max-width: 800px;
+}
+
+.accordion_list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .accordion_point {
@@ -97,10 +97,10 @@
   outline: none;
   padding: 14px 24px;
   border-radius: 50px;
-  border: 2px solid #F9F9F9;
-  background-color: #ee5626;
+  border: 2px solid var(--themes-second-color);
+  background-color: var(--themes-main-color);
   font-size: 20px;
-  color: #f9f9f9;
+  color: var(--themes-second-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,8 +116,8 @@
 }
 
 .button:disabled {
-  background-color: #f8dac6;
-  color: #fff;
+  background-color: var(--themes-marker-color);
+  color: var(--themes-background-color);
   box-shadow: none;
   pointer-events: none;
 }
@@ -163,4 +163,45 @@
 
 .burger-button_line__one {
   scale: 0;
+}
+
+/* styles on breakpoints */
+@media screen and (min-width: 600px) {
+  .item_columns {
+    grid-column: span var(--sm);
+  }
+
+  .item_flex {
+    flex: var(--sm);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .item_columns {
+    grid-column: span var(--md);
+  }
+
+  .item_flex {
+    flex: var(--md);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .item_columns {
+    grid-column: span var(--lg);
+  }
+
+  .item_flex {
+    flex: var(--lg);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .item_columns {
+    grid-column: span var(--xl);
+  }
+
+  .item_flex {
+    flex: var(--xl);
+  }
 }

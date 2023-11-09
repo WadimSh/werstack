@@ -12,7 +12,6 @@ const FAQ = ({ ref }) => {
  return (
   <LayoutColumns
     container
-    nameTag="section"
     ref={ref}
     gap={8}
   >

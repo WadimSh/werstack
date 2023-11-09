@@ -13,7 +13,6 @@ const About = ({ ref }) => {
  return (
   <LayoutColumns
     container
-    nameTag="section"
     ref={ref}
     gap={6}
   >

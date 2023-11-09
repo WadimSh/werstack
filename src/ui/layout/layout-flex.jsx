@@ -1,9 +1,9 @@
 import React, { useMemo } from "react";
 import '../../style/styles.css';
 
-const LayoutColumns = ({ container, item, forwardedRef, gap, children, xs, sm, md, lg, xl }) => {
-  const Tag = container ? 'section' : 'div';
-  
+const LayoutFlex = ({ container, item, nameTag, forwardedRef, gap, children, xs, sm, md, lg, xl }) => {
+  const validNames = ['section', 'article', 'footer', 'header'];
+  const Tag = validNames.includes(nameTag) ? nameTag : 'div';
   
   const sizes = useMemo(() => {
     const defaultSize = 12;
@@ -16,25 +16,32 @@ const LayoutColumns = ({ container, item, forwardedRef, gap, children, xs, sm, m
     };
   }, [xs, sm, md, lg, xl]);
 
+  const getGridSize = (size) => {
+    if (typeof size === 'number') {
+      return size <= 12 ? `${Math.round((size / 12) * 10e7) / 10e5}%` : '100%';
+    }
+    return 'auto';
+  };
+
   const combinedStyle = useMemo(() => {
     return {
       ...(container ? { '--gap-gap': gap + 'px' } : {}),
       ...(item
         ? {
-            '--xs': sizes.xs,
-            '--sm': sizes.sm,
-            '--md': sizes.md,
-            '--lg': sizes.lg,
-            '--xl': sizes.xl,
+            '--xs': getGridSize(sizes.xs),
+            '--sm': getGridSize(sizes.sm),
+            '--md': getGridSize(sizes.md),
+            '--lg': getGridSize(sizes.lg),
+            '--xl': getGridSize(sizes.xl),
           }
         : {}),
     };
   }, [container, gap, item, sizes]);
-
+  
   return (
     <Tag 
       style={combinedStyle} 
-      className={container ? 'container_columns' : item ? 'item_columns' : ''} 
+      className={container ? 'container_flex' : item ? 'item_flex' : ''} 
       ref={forwardedRef}
     >
       {children}
@@ -43,5 +50,5 @@ const LayoutColumns = ({ container, item, forwardedRef, gap, children, xs, sm, m
 };
 
 export default React.forwardRef((props, ref) => (
-  <LayoutColumns forwardedRef={ref} {...props} />
+  <LayoutFlex forwardedRef={ref} {...props} />
 ));
