@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "../icons/icons";
-import './button.css';
+import '../../style/styles.css';
 
 const Button = ({ htmlType = "button", onClick, side, children, customClass, ...rest }) => {
   // Проверка, нужно ли отображать иконку и передача props в компонент Icon

@@ -1,0 +1,166 @@
+/* стили контейнера */
+.container {
+  width: var(--width-layout);
+  padding-top: var(--padding-layout);
+  margin-bottom: var(--margin-layout);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap-gap);
+}
+
+.item {
+  grid-column: span var(--xs);
+  display: flex;
+}
+
+@media screen and (min-width: 600px) {
+  .item {
+    grid-column: span var(--sm);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .item {
+    grid-column: span var(--md);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .item {
+    grid-column: span var(--lg);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .item {
+    grid-column: span var(--xl);
+  }
+}
+
+/* стили аккордиона */
+.accordion {
+  margin-left: auto;
+  max-width: 800px;
+}
+
+.box {
+  border-bottom: 2px solid var(--themes-main-color);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 20px 10px 10px;
+  cursor: pointer;
+}
+
+.span {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.question {
+  margin: 0;
+}
+
+.answer {
+  padding: 0 20px 10px;
+}
+
+.accordion .span {
+  transition: .3s;
+}
+
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height .5s ease;
+}
+
+.collapse .show {
+  height: auto;
+}
+
+.rotate {
+  rotate: 135deg;
+  top: 6px;
+  left: 3px;
+}
+
+/* стили кнопки */
+.button {
+  cursor: pointer;
+  outline: none;
+  padding: 14px 24px;
+  border-radius: 50px;
+  border: 2px solid #F9F9F9;
+  background-color: #ee5626;
+  font-size: 20px;
+  color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.button:focus {
+  opacity: .9;
+}
+
+.button:hover {
+  opacity: .9;
+}
+
+.button:disabled {
+  background-color: #f8dac6;
+  color: #fff;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+/* стили кнопки-бургера */
+.line {
+  position: relative;
+  rotate: 0;
+  top: 0;
+  scale: 1;
+  height: 2px;
+  width: 100%;
+  background: var(--themes-main-color);
+  border: none;
+}
+
+.boxi {
+  height: 18px;
+  width: 55px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  background: transparent;
+  margin: 10px;
+}
+
+.boxi .line {
+  transition: .6s;
+}
+
+.up {
+  rotate: 225deg;
+  top: 8px;
+}
+
+.down {
+  rotate: -225deg;
+  top: -8px;
+}
+
+.one {
+  scale: 0;
+}

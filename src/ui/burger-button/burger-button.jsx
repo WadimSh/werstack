@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./burger-button.css";
+import '../../style/styles.css';
 
 const BurgerButton = ({ onClick }) => {
   const [isOpen, setIsOpen] = useState(false);

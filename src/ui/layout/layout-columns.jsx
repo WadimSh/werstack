@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import './layout-columns.css';
+import '../../style/styles.css';
 
 const LayoutColumns = ({ container, item, nameTag, forwardedRef, gap, children, xs, sm, md, lg, xl }) => {
   const validNames = ['section', 'div', 'article', 'footer', 'header'];
