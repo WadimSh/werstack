@@ -5,7 +5,7 @@ const Description = ({ texts, customClass }) => {
   const classNames = ['text_type_default', customClass].filter(Boolean).join(' ');
   
   return (
-    <div style={{ alignSelf: "flex-end", maxWidth: "800px" }}>
+    <div style={{ marginLeft: "auto", maxWidth: "800px" }}>
       {texts.map((text, index) => (
         <p key={index} className={classNames}>{text}</p>
       ))}
