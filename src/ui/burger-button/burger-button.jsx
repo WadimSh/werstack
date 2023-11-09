@@ -9,15 +9,15 @@ const BurgerButton = ({ onClick }) => {
   };
   
   return (
-    <button type="button" onClick={handleClick} className="boxi">
+    <button type="button" onClick={handleClick} className="burger-button">
       <span 
-        className={`line ${isOpen ? "up" : "" }`}
+        className={`burger-button_line ${isOpen ? "burger-button_line__up" : "" }`}
       ></span>
       <span 
-        className={`line ${isOpen ? "one" : "" }`}
+        className={`burger-button_line ${isOpen ? "burger-button_line__one" : "" }`}
       ></span>
       <span 
-        className={`line ${isOpen ? "down" : "" }`}
+        className={`burger-button_line ${isOpen ? "burger-button_line__down" : "" }`}
       ></span>
     </button>
   );

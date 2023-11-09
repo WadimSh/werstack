@@ -43,11 +43,11 @@
   max-width: 800px;
 }
 
-.box {
+.accordion_point {
   border-bottom: 2px solid var(--themes-main-color);
 }
 
-.header {
+.accordion_header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,36 +56,36 @@
   cursor: pointer;
 }
 
-.span {
+.accordion_check {
   position: relative;
   top: 0;
   left: 0;
 }
 
-.question {
+.accordion_question {
   margin: 0;
 }
 
-.answer {
+.accordion_answer {
   padding: 0 20px 10px;
 }
 
-.accordion .span {
+.accordion .accordion_check {
   transition: .3s;
 }
 
-.collapse {
+.accordion_collapse {
   position: relative;
   height: 0;
   overflow: hidden;
   transition: height .5s ease;
 }
 
-.collapse .show {
+.accordion_collapse .accordion_collapse__show {
   height: auto;
 }
 
-.rotate {
+.accordion_check__rotate {
   rotate: 135deg;
   top: 6px;
   left: 3px;
@@ -123,18 +123,7 @@
 }
 
 /* стили кнопки-бургера */
-.line {
-  position: relative;
-  rotate: 0;
-  top: 0;
-  scale: 1;
-  height: 2px;
-  width: 100%;
-  background: var(--themes-main-color);
-  border: none;
-}
-
-.boxi {
+.burger-button {
   height: 18px;
   width: 55px;
   cursor: pointer;
@@ -147,20 +136,31 @@
   margin: 10px;
 }
 
-.boxi .line {
+.burger-button_line {
+  position: relative;
+  rotate: 0;
+  top: 0;
+  scale: 1;
+  height: 2px;
+  width: 100%;
+  background: var(--themes-main-color);
+  border: none;
+}
+
+.burger-button .burger-button_line {
   transition: .6s;
 }
 
-.up {
+.burger-button_line__up {
   rotate: 225deg;
   top: 8px;
 }
 
-.down {
+.burger-button_line__down {
   rotate: -225deg;
   top: -8px;
 }
 
-.one {
+.burger-button_line__one {
   scale: 0;
 }

@@ -9,21 +9,21 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
   const isActive = active === id;
 
   // Генерируем классы для стилизации на основе активности элемента
-  const headerClass = `header ${isActive ? "active" : ""}`;
-  const spanClass = `text_type_span span ${isActive ? "rotate" : ""}`;
-  const collapseClass = `collapse ${isActive ? "show" : ""}`;
+  //const headerClass = `accordion_header ${isActive ? "accordion_header__active" : ""}`;
+  const checkClass = `text_type_span accordion_check ${isActive ? "accordion_check__rotate" : ""}`;
+  const collapseClass = `accordion_collapse ${isActive ? "accordion_collapse__show" : ""}`;
   
   // Определяем стили для отображения или скрытия содержимого
   const contentStyle = isActive ? { height: contentEl.current.scrollHeight } : { height: "0px" };
  
   return (
-    <div className="box">
-      <div className={headerClass} onClick={() => handleToggle(id)}>
-        <h3 className="question text_type_small">{question}</h3>
-        <span className={spanClass}>+</span>
+    <div className="accordion_point">
+      <div className="accordion_header" onClick={() => handleToggle(id)}>
+        <h3 className="accordion_question text_type_small">{question}</h3>
+        <span className={checkClass}>+</span>
       </div>
       <div ref={contentEl} className={collapseClass} style={contentStyle}>
-        <p className="answer text_type_default">{answer}</p>
+        <p className="accordion_answer text_type_default">{answer}</p>
       </div>
     </div>
   );
