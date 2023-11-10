@@ -36,7 +36,6 @@
 .item_flex {
   flex: var(--xs);
   box-sizing: border-box;
-  height: 20px;
   border: 1px solid var(--themes-main-color);
 }
 
@@ -172,6 +171,72 @@
 
 .burger-button_line__one {
   scale: 0;
+}
+
+/* стили поля ввода */
+.field {
+  position: relative;
+  height: 52px;
+  max-width: 300px;
+  min-width: 150px;
+  color: #dae0e6;
+  overflow: hidden;
+  margin: 8px;
+}
+
+.field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: #272d37;
+  line-height: 52px;
+  outline: 0;
+  background-color: inherit;
+  padding-top: 20px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.field .label-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  pointer-events: none;
+  border-bottom: 1px solid #272d37;
+}
+
+.field .label-wrapper::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1.5px solid #437ef7;
+  left: 0;
+  bottom: -1px;
+  transform: translateX(-100%);
+  transition: transform .3s ease;
+}
+
+.field .label-text {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all .3s ease;
+}
+
+.field input:focus + .label-wrapper .label-text,
+.field input:valid + .label-wrapper .label-text {
+  font-size: 12px;
+  color: #437ef7;
+  transform: translateY(-150%);
+}
+
+.field input:focus + .label-wrapper::after,
+.field input:valid + .label-wrapper::after {
+  transform: translateX(0%);
 }
 
 /* styles on breakpoints */

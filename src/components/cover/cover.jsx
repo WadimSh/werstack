@@ -1,6 +1,7 @@
 import React from "react";
 
 import LayoutFlex from "../../ui/layout/layout-flex";
+import InputField from "../../ui/input/input-field";
 
 const Cover = () => {
 
@@ -13,16 +14,26 @@ const Cover = () => {
       <LayoutFlex
         item
         md={1}
-      ></LayoutFlex>
+      >
+        <InputField 
+          type="text"
+          name="text"
+          placeholder="text"
+        />
+      </LayoutFlex>
       <LayoutFlex
         item
         sm={8}
         md={6}
-      ></LayoutFlex>
+      >
+        text
+      </LayoutFlex>
       <LayoutFlex
         item
         md={12}
-      ></LayoutFlex>
+      >
+        text
+      </LayoutFlex>
     </LayoutFlex>
   );
 };

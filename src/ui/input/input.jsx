@@ -40,7 +40,7 @@ const Input = ({ type = 'text', label, placeholder, onInputChange, validation, v
         value={value}
         onChange={handleInputChange}
       />
-      {error && <div className="error-message">{error}</div>}
+      {error && <span>{error}</span>}
     </div>
   );
 };

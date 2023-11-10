@@ -18,11 +18,11 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
   return (
     <li className="accordion_point">
       <div className="accordion_header" onClick={() => handleToggle(id)}>
-        <h3 className="accordion_question text_type_small">{question}</h3>
+        <h3 className="text_type_small accordion_question">{question}</h3>
         <span className={checkClass}>+</span>
       </div>
       <div ref={contentEl} className={collapseClass} style={contentStyle}>
-        <p className="accordion_answer text_type_default">{answer}</p>
+        <p className="text_type_default accordion_answer">{answer}</p>
       </div>
     </li>
   );

@@ -5,7 +5,7 @@ const Button = ({ htmlType = "button", onClick, side, children, customClass, ...
   // Проверка, нужно ли отображать иконку и передача props в компонент Icon
   const renderIcon = side !== undefined && <Icon side={side} />;
   // Создание строки с CSS классами
-  const classNames = ['button', customClass].filter(Boolean).join(' ');
+  const classNames = ['text_type_span button', customClass].filter(Boolean).join(' ');
   
   return (
     <button type={htmlType} onClick={onClick} className={classNames} {...rest}>
