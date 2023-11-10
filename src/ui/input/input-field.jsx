@@ -7,7 +7,7 @@ const InputField = ({ type = 'text', name, onInputChange, placeholder, customCla
     <div className="field">
       <input 
         type={type}
-        name={name}
+        id={name}
         autoComplete="off"
         required
       />

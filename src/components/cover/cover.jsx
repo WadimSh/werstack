@@ -18,7 +18,7 @@ const Cover = () => {
         <InputField 
           type="text"
           name="text"
-          placeholder="text"
+          placeholder="Укажите свое имя"
         />
       </LayoutFlex>
       <LayoutFlex
