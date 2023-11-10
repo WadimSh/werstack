@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import '../../style/styles.css';
 
 const AccordionItem = ({ handleToggle, active, faq }) => {
   const contentEl = useRef(null);

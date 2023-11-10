@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import '../../style/styles.css';
 
 const LayoutFlex = ({ container, item, nameTag, forwardedRef, gap, children, xs, sm, md, lg, xl }) => {
   const validNames = ['section', 'article', 'footer', 'header'];

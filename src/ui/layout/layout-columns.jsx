@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import '../../style/styles.css';
 
 const LayoutColumns = ({ container, item, forwardedRef, gap, children, xs, sm, md, lg, xl }) => {
   const Tag = container ? 'section' : 'div';
