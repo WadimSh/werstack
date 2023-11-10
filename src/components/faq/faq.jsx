@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ConfigContext } from '../../contexts/contexts';
+import { ConfigContext } from '../../utils/contexts';
 
 import Title from '../../ui/title/title';
 import Accordion from '../../ui/accordion/accordion';
