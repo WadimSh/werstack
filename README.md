@@ -2,6 +2,7 @@
 
 Сервис по разработке сайтов и веб-приложений, с подключением систем управлениям контентом (cms), взаимодействием с клиентами (crm) и каталогами товаров (e-com).
 
+```mermaid
 ---
 title: Example Git diagram
 ---
@@ -16,5 +17,6 @@ gitGraph
    merge develop
    commit
    commit
-
+     
+```
 [о лендинге](/about_landing.md)
