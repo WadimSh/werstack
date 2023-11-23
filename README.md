@@ -14,11 +14,11 @@ gitGraph
    commit id: "feat1"
    branch header
    checkout header
-   commit id: "feat"
-   commit id: "fix"
+   commit id: "feat2"
+   commit id: "fix1"
    checkout develop
    merge header
-   commit id: "fix"
+   commit id: "fix2"
    checkout main
    commit id: "hot fix"
    commit id: "deploy"
