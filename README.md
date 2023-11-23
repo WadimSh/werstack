@@ -12,9 +12,14 @@ gitGraph
    branch develop
    checkout develop
    commit id: "feat1"
+   branch header
+   checkout header
+   commit id: "feat"
+   commit id: "fix"
+   checkout develop
+   merge header
    commit id: "fix"
    checkout main
-   merge develop
    commit id: "hot fix"
    commit id: "deploy"
      
