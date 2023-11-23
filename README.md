@@ -11,7 +11,7 @@ gitGraph
    commit id "feat"
    branch develop
    checkout develop
-   commit id "feat"
+   commit id "feat1"
    commit id "fix"
    checkout main
    merge develop
