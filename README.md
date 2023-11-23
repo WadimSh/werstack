@@ -7,16 +7,16 @@
 title: Example Git diagram
 ---
 gitGraph
-   commit id "first commit"
-   commit id "feat"
+   commit id: "first commit"
+   commit id: "feat"
    branch develop
    checkout develop
-   commit id "feat1"
-   commit id "fix"
+   commit id: "feat1"
+   commit id: "fix"
    checkout main
    merge develop
-   commit id "hot fix"
-   commit id "deploy"
+   commit id: "hot fix"
+   commit id: "deploy"
      
 ```
 [о лендинге](/about_landing.md)
